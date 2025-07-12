@@ -1,0 +1,273 @@
+/* ============================= */
+/*      HERO SECTION STYLING     */
+/* ============================= */
+
+.hero-section {
+  background-color: var(--white-page);
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+
+/* Container limits the width of the content */
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Flex layout for the main hero content */
+.hero-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  height: 400px;
+}
+
+/* ============================= */
+/*        LEFT HERO TEXT         */
+/* ============================= */
+
+.left-hero {
+  padding-left: 80px;
+}
+
+.left-hero h1 {
+  color: var(--black);
+  font-size: 50px;
+  font-weight: lighter;
+}
+
+.left-hero h2 {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--black);
+  padding: 5px 0;
+}
+
+.blue-text {
+  color: var(--black-blue);
+}
+
+.left-hero p {
+  color: var(--black-gray);
+}
+
+/* ============================= */
+/*         DOWNLOAD BUTTON       */
+/* ============================= */
+
+.hero-content .btn {
+  position: relative;
+  border: none;
+  height: 40px;
+  width: 125px;
+  padding: 0 5px;
+  cursor: pointer;
+  border-radius: 10px;
+  z-index: 1;
+  background-color: var(--navbar-color);
+  margin-top: 10px;
+}
+
+.hero-content .btn::after {
+  content: '';
+  box-sizing: border-box;
+  position: absolute;
+  height: 0;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: 0.8s linear;
+  border-radius: 10px;
+}
+
+/* On hover, button fills with color from bottom to top */
+.hero-content .btn:hover::after {
+  background-color: var(--black-blue);
+  height: 100%;
+}
+
+/* ============================= */
+/*     SOCIAL ICON STYLING       */
+/* ============================= */
+
+/* Social icon base style */
+.social-icon {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background-color: var(--white-page);
+  color: var(--black-gray);
+  text-decoration: none;
+  padding: 10px 30px;
+  border-radius: 50px;
+  width: 100px;
+  overflow: hidden;
+  transition: width 0.7s ease, background-color 0.7s, color 0.7s;
+  font-size: 35px;
+  position: relative;
+}
+
+/* Hidden label (text) inside button */
+.social-icon span {
+  white-space: nowrap;
+  opacity: 0;
+  width: 0;
+  transition: all 0.5s ease;
+  font-size: 20px;
+}
+
+/* Expand width and show text on hover */
+.social-icon:hover {
+  width: 180px;
+}
+
+.social-icon:hover span {
+  opacity: 1;
+  width: auto;
+}
+
+/* Specific hover styles per platform */
+.linkedin:hover {
+  background-color: #0077b5;
+  color: #fff;
+}
+
+.github:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.instagram:hover {
+  background-color: #E1306C;
+  color: #fff;
+}
+
+/* Instagram gets extra width on hover */
+.right-hero .instagram:hover {
+  width: 220px;
+}
+
+/* ============================= */
+/*       RESPONSIVE DESIGN       */
+/* ============================= */
+
+/* Tablet: 769px - 941px */
+@media (min-width: 769px) and (max-width: 941px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .container {
+    width: 90%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    height: auto;
+    gap: 35px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .left-hero {
+    padding-left: 0;
+  }
+
+  .right-hero {
+    display: flex;
+  }
+
+  .hero-content .btn {
+    margin-top: 20px;
+  }
+
+  .social-icon {
+    font-size: 38px;
+  }
+
+  .social-icon:hover {
+    width: 150px;
+  }
+}
+
+/* Mobile Medium: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    height: auto;
+    gap: 35px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .left-hero {
+    padding-left: 0;
+  }
+
+  .left-hero h1 {
+    font-size: 38px;
+  }
+
+  .left-hero h2 {
+    font-size: 27px;
+  }
+
+  .right-hero {
+    display: flex;
+  }
+
+  .hero-content .btn {
+    margin-top: 20px;
+  }
+}
+
+/* Mobile Small: max 480px */
+@media (max-width: 480px) {
+  .hero-section {
+    padding: 40px 0;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    height: auto;
+    gap: 35px;
+    text-align: center;
+    padding-top: 40px;
+  }
+
+  .left-hero {
+    padding-left: 0;
+  }
+
+  .left-hero h1 {
+    font-size: 30px;
+  }
+
+  .left-hero h2 {
+    font-size: 22px;
+  }
+
+  .right-hero {
+    display: flex;
+  }
+
+  .hero-content .btn {
+    margin-top: 20px;
+  }
+}

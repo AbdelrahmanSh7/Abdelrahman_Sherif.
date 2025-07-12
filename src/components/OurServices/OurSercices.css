@@ -1,0 +1,138 @@
+/* ====== SECTION CONTAINER ====== */
+.our-services-section {
+  background-color: var(--white-page);
+  padding: 4rem 0;
+  overflow: hidden;
+}
+
+/* ====== SECTION TITLE ====== */
+.our-services-content .title h2 {
+  font-size: 60px;
+  text-align: center;
+  font-weight: 300;
+  margin-bottom: 4rem;
+}
+
+/* ====== SWIPER CONTAINER ====== */
+.swiper {
+  padding-bottom: 60px;
+}
+
+/* ====== EACH CARD ====== */
+.service-card {
+  background-color: #f9f9f9;
+  border-radius: 16px;
+  padding: 3rem;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
+  max-width: 1100px;
+  margin: auto;
+}
+
+.service-card .title {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.service-card .title h3 {
+  font-size: 32px;
+  font-weight: 400;
+  color: var(--black);
+}
+
+.service-card .data {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+  text-align: left;
+}
+
+.service-card .data img {
+  width: 320px;
+  max-width: 100%;
+  border-radius: 12px;
+}
+
+.service-card .data p {
+  font-size: 18px;
+  color: var(--black-gray);
+  line-height: 1.7;
+  max-width: 500px;
+}
+
+/* ====== HIGHLIGHT ====== */
+.highlight {
+  color: var(--black);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+/* ====== SWIPER DOTS ====== */
+.swiper-pagination {
+  position: relative;
+  bottom: 0;
+  margin-top: 30px;
+}
+
+.swiper-pagination-bullet {
+  width: 14px;
+  height: 14px;
+  background-color: transparent;
+  border: 2px solid var(--black-gray);
+  opacity: 1;
+  margin: 0 8px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: var(--black-gray);
+  transform: scale(1.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .our-services-content .title h2 {
+    font-size: 42px;
+  }
+
+  .service-card {
+    padding: 2rem;
+  }
+
+  .service-card .title h3 {
+    font-size: 26px;
+  }
+
+  .service-card .data {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .service-card .data p {
+    font-size: 16px;
+    max-width: 100%;
+  }
+
+  .highlight {
+    font-size: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .our-services-content .title h2 {
+    font-size: 36px;
+  }
+
+  .highlight {
+    font-size: 18px;
+  }
+
+  .swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    margin: 0 4px;
+  }
+}

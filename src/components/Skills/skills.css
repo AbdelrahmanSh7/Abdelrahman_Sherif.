@@ -1,0 +1,280 @@
+/* ==================== GLOBAL STYLES ==================== */
+.skills-section {
+    background-color: var(--light-gray);
+    height: 1250px;
+}
+
+/* ==================== SECTION HEADER ==================== */
+.skills-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 3rem;
+    gap: 15px;
+}
+
+.skills-header .logocode svg {
+    width: 70px;
+    color: var(--black);
+}
+
+.skills-header .title h2 {
+    font-size: 60px;
+    font-weight: lighter;
+}
+
+/* ==================== SKILLS CONTENT ==================== */
+.skills-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+/* Each group title like "Using Now", "Programming Languages" */
+.skills-group h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: #444;
+    margin: 60px;
+    padding-left: 80px;
+}
+
+/* Grid for skill items (icons + text) */
+.skills-icons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 20px;
+    justify-items: center;
+    align-items: center;
+    margin: 0 100px;
+}
+
+/* Each individual skill item */
+.skills-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    transition: all 0.6s ease;
+}
+
+/* Skill icon */
+.skills-item img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 10px;
+    background: var(--light-gray);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.07);
+    padding: 8px;
+    transition: transform 0.6s ease;
+}
+
+/* Skill name */
+.skills-item span {
+    font-size: 24px;
+    color: #666;
+    font-weight: 500;
+    margin-top: 4px;
+    text-align: center;
+    letter-spacing: 0.5px;
+    transition: color 0.3s ease, font-weight 0.3s ease;
+}
+
+/* Hover effects */
+.skills-item:hover {
+    border-radius: 12px;
+}
+
+.skills-item:hover img {
+    transform: scale(1.08);
+}
+
+.skills-item:hover span {
+    font-weight: bold;
+    color: var(--black);
+}
+
+/* ==================== RESPONSIVE DESIGN ==================== */
+
+/* Large screens: 1281px - 1919px */
+@media (min-width: 1281px) and (max-width: 1919px) {
+    .skills-section {
+        height: 1100px;
+    }
+
+    .skills-header .title h2 {
+        font-size: 55px;
+    }
+
+    .skills-header .logocode svg {
+        width: 65px;
+    }
+
+    .skills-group h3 {
+        font-size: 1.1rem;
+        margin: 50px;
+        padding-left: 70px;
+    }
+
+    .skills-icons {
+        gap: 25px 18px;
+        margin: 0 80px;
+    }
+
+    .skills-item img {
+        width: 65px;
+        height: 65px;
+    }
+
+    .skills-item span {
+        font-size: 22px;
+    }
+}
+
+/* Small laptop: 1025px - 1280px */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    .skills-section {
+        height: 1100px;
+    }
+
+    .skills-header .title h2 {
+        font-size: 50px;
+    }
+
+    .skills-header .logocode svg {
+        width: 60px;
+    }
+
+    .skills-group h3 {
+        font-size: 1rem;
+        margin: 45px;
+        padding-left: 60px;
+    }
+
+    .skills-icons {
+        gap: 20px 15px;
+        margin: 0 70px;
+    }
+
+    .skills-item img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .skills-item span {
+        font-size: 20px;
+    }
+}
+
+/* Tablet: 769px - 1024px */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .skills-section {
+        height: auto;
+        min-height: 1100px;
+    }
+
+    .skills-header .title h2 {
+        font-size: 45px;
+    }
+
+    .skills-header .logocode svg {
+        width: 55px;
+    }
+
+    .skills-group h3 {
+        font-size: 0.95rem;
+        margin: 35px;
+        padding-left: 50px;
+    }
+
+    .skills-icons {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 18px 12px;
+        margin: 0 50px;
+    }
+
+    .skills-item img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .skills-item span {
+        font-size: 18px;
+    }
+}
+
+/* Medium mobile: 481px - 768px */
+@media (min-width: 481px) and (max-width: 768px) {
+    .skills-section {
+        height: auto;
+        min-height: 1150px;
+    }
+
+    .skills-header .title h2 {
+        font-size: 40px;
+    }
+
+    .skills-header .logocode svg {
+        width: 50px;
+    }
+
+    .skills-group h3 {
+        font-size: 0.9rem;
+        margin: 30px;
+        padding-left: 40px;
+    }
+
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px 10px;
+        margin: 0 30px;
+    }
+
+    .skills-item img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .skills-item span {
+        font-size: 16px;
+    }
+}
+
+/* Small mobile: max 480px */
+@media (max-width: 480px) {
+    .skills-section {
+        height: auto;
+        height: 1100px;
+    }
+
+    .skills-header .title h2 {
+        font-size: 35px;
+    }
+
+    .skills-header .logocode svg {
+        width: 45px;
+    }
+
+    .skills-group h3 {
+        font-size: 0.85rem;
+        margin: 25px;
+        padding-left: 30px;
+    }
+
+    .skills-icons {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px 8px;
+        margin: 0 20px;
+    }
+
+    .skills-item img {
+        width: 45px;
+        height: 45px;
+    }
+
+    .skills-item span {
+        font-size: 14px;
+    }
+}
