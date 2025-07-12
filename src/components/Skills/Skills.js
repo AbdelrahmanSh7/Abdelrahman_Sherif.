@@ -61,7 +61,7 @@ const Skills = () => {
                   <span>HTML</span>
                 </div>
                 <div className="skills-item">
-                  <img src="/Bootstrap.png" alt="Bootstrap" />
+                  <img src="/bootstrap.png" alt="Bootstrap" />
                   <span>Bootstrap</span>
                 </div>
                 <div className="skills-item">
