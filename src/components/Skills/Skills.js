@@ -57,8 +57,8 @@ const Skills = () => {
                   <span>Java Script</span>
                 </div>
                 <div className="skills-item">
-                  <img src="/html.png" alt="HTML" />
-                  <span>HTML</span>
+                  <img src="/react.png" alt="react" />
+                  <span>React</span>
                 </div>
                 <div className="skills-item">
                   <img src="/bootstrap.png" alt="Bootstrap" />
